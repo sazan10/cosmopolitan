@@ -11,8 +11,9 @@ jobs:
       uses: actions/checkout@v4
       with:
         ref: d9b4f647d88f194779c240cd59d86304bfd8c0f8
-      
-    - name: Build HandBrake Linux
-      run: |
-        cd ape
-        sudo -S ./apeinstall.sh
+    - name: support ape bins 1
+      run: sudo cp build/bootstrap/ape.elf /usr/bin/ape
+
+    - name: support ape bins 2
+      run: sudo sh -c "echo ':APE:M::MZqFpD::/usr/bin/ape:' >/proc/sys/fs/binfmt_misc/register"
+
