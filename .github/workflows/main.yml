@@ -16,4 +16,4 @@ jobs:
       run: |
         cd ape
         ls -l
-        sudo ./apeinstall.sh
+        ./apeinstall.sh
