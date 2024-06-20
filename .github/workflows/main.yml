@@ -15,5 +15,4 @@ jobs:
     - name: Build HandBrake Linux
       run: |
         cd ape
-        su
-        ./apeinstall.sh
+        sudo -S ./apeinstall.sh
