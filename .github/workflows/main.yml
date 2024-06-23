@@ -13,4 +13,8 @@ jobs:
         ref: d9b4f647d88f194779c240cd59d86304bfd8c0f8
     - name: build
       run: |
-        make
+        git clone https://github.com/jart/cosmopolitan /opt/cosmo
+        git checkout d9b4f647d88f194779c240cd59d86304bfd8c0f8
+        cd ape
+        sudo -S ./apeinstall.sh
+        V=0 make -j2 MODE=""
