@@ -17,4 +17,5 @@ jobs:
         git checkout d9b4f647d88f194779c240cd59d86304bfd8c0f8
         cd ape
         sudo -S ./apeinstall.sh
+        cd ..
         V=0 make -j2 MODE=""
