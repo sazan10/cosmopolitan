@@ -18,4 +18,4 @@ jobs:
         cd ape
         sudo -S ./apeinstall.sh
         cd ..
-        V=0 make -j2 MODE=""
+        make -j$(nproc)
